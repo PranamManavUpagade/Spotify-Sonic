@@ -18,7 +18,7 @@ export default function Home() {
     setLoading(true);
 
     try {
-      const res = await fetch("https://spotify-sonic.onrender.com", {
+      const res = await fetch("https://spotify-sonic.onrender.com/api/recommend", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ prompt: userMessage })
